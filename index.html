@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Made by Benedict -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Benedict Umeozor">
+  <title>Typing Speed Test</title>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/fffd17f093.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+ 
+ <header>
+   <div class="container">
+     <h2><span>Ben</span>Coding...</h2>
+   </div>
+ </header>
+ 
+ <section id="introduction">
+   <div class="title">
+     <span>Typing</span> Speed Test
+   </div>
+   <div class="difficulty">
+     <input class="level" type="radio" name="game" id="easy">
+     <input class="level" type="radio" name="game" id="medium">
+     <input class="level" type="radio" name="game" id="hard">
+     <p>Select Difficulty:</p>
+     <label for="easy">
+       <span class="dot one"></span>
+       <span class="label">Easy</span>
+     </label>
+     <label for="medium">
+       <span class="dot two"></span>
+       <span class="label">Medium</span>
+     </label>
+     <label for="hard">
+       <span class="dot three"></span>
+       <span class="label">Hard</span>
+     </label>
+     
+     <div class="instructions">
+       <h3>Instructions</h3>
+       <span>Once you click Start, the game begins immediately. You have a given number of seconds to complete every word that appears (without spacing). The number of seconds will depend on the difficulty chosen: easy[5], medium[3], and hard[1].
+        To continue playing when the game is over, just type in the word shown and game should reset.</span>
+     </div>
+     
+     <button id="start-btn">Start</button>
+   </div>
+ </section>
+ 
+ <section id="main-game">
+   <div class="title">
+     <span>Typing</span> Speed Test
+   </div>
+   <div class="tool-tip">
+     You have <span id="time-stamp">5</span> seconds to type in each word
+   </div>
+   <div class="word">
+     <p id="word"></p>
+   </div>
+   <div class="input-box">
+     <input type="text" id="input" placeholder="Start typing...">
+     <p id="result"></p>
+   </div>
+   <div class="time-score">
+     <p>Time left:
+     <span id="time"></span>
+     </p>
+     <p>Score:
+     <span id="score">0</span>
+     </p>
+   </div>
+ </section>
+ 
+ <footer>
+   <div class="container">
+     Created by <span>Benedict</span> || &copy; 2022. 
+   </div>
+ </footer>
+ <!-- JavaScript -->
+  <script src="main.js"></script>
+  <script src="words.js"></script>
+</body>
+</html>

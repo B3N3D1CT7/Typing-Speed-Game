@@ -1,0 +1,184 @@
+/* Google font import*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* General Styling*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+body {
+  background: #333;
+}
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+header {
+  padding: .6rem 0;
+  background: #222;
+  color: #fff;
+  border-bottom: .5px solid crimson;
+}
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header h2 {
+  font-family: "open sans", sans-serif;
+}
+header h2 span {
+  color: crimson;
+}
+
+#introduction {
+  
+}
+.title {
+  margin: 1rem auto;
+  text-align: center;
+  font-size: 1.6rem;
+  color: #fff;
+  font-weight: 600;
+  font-family: "open sans", sans-serif;
+}
+.title span {
+  color: crimson;
+}
+.difficulty {
+  margin: 1rem;
+  background: #fff;
+  padding: 1rem;
+  max-width: 80%;
+  margin: auto;
+  border-radius: 8px;
+}
+.difficulty p {
+  color: crimson;
+  font-weight: 500;
+  margin-bottom: .5rem;
+}
+.difficulty label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 1rem 0;
+}
+label .dot {
+  content: "";
+  display: inline-block;
+  height: 1.2rem;
+  width: 1.2rem;
+  background: transparent;
+  border: 5px solid #222;
+  border-radius: 50%;
+  margin-right: .4rem;
+  transition: .3s ease;
+}
+label .label {
+  display: inline-block;
+  font-weight: 450;
+}
+#easy:checked ~ label .one,
+#medium:checked ~ label .two,
+#hard:checked ~ label .three{
+  background: crimson;
+}
+
+.difficulty input[type="radio"] {
+  display: none;
+}
+.difficulty button {
+  border: none;
+  display: block;
+  margin: auto;
+  padding: .4rem 0;
+  width: 5rem;
+  background: crimson;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: .5px;
+  border-radius: 5px;
+  transition: 3s ease;
+}
+.difficulty .instructions {
+  margin: 1rem 0;
+  display: none;
+}
+.instructions h3 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.instructions span {
+  font-size: .9rem;
+}
+.instructions #get-time {
+  color: crimson;
+  font-weight: 700;
+}
+.difficulty button:hover {
+  transform: scale(0.90);
+}
+
+#main-game {
+  display: none;
+}
+#main-game div {
+  margin: 1rem auto;
+  text-align: center;
+  color: #fff;
+  max-width: 75%;
+}
+.tool-tip #time-stamp {
+  color: crimson;
+}
+.word #word {
+  font-size: 2.5rem;
+  display: inline-block;
+  background: crimson;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+}
+.input-box {
+  margin: 2rem 0;
+}
+.input-box input {
+  border: none;
+  outline: none;
+  height: 2.3rem;
+  width: 100%;
+  padding-left: .5rem;
+  border-radius: 5px;
+}
+.input-box #result {
+  margin: .5rem;
+  font-size: 1.1rem;
+}
+footer {
+  text-align: center;
+  margin-top: 1rem;
+  color: #fff;
+  font-weight: 500;
+}
+footer span {
+  color: crimson;
+}
+
+
+@media (min-width: 600px) {
+  header .fa-bars,
+  header .fa-x {
+    display: none;
+  }
+  .difficulty {
+    max-width: 25rem;
+  }
+  #main-game div {
+    max-width: 25rem;
+  }
+}
