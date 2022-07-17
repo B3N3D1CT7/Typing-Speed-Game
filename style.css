@@ -165,7 +165,7 @@ label .label {
   display: none;
   margin: .5rem auto;
   padding: .4rem;
-  max-width: 8rem;
+  width: 7rem;
   background: crimson;
   color: #fff;
   font-weight: 500;
