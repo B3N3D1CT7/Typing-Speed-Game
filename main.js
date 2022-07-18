@@ -68,6 +68,7 @@ function playGame() {
   randomWord();
   time = getTimeCount();
   timeOut();
+  input.disabled = false;
   input.focus();
   input.addEventListener('input', wordMatch);
   setInterval(checkGameStatus, 50);
@@ -77,7 +78,7 @@ function timeCount() {
   if (time > 0) {
     time--;
   } else if (time === 0) {
-    result.textContent = 'Game Over!!';
+    result.textContent = 'Time Out!!';
     result.style.color = 'crimson';
     isPlaying = false;
   }
@@ -110,6 +111,7 @@ function checkGameStatus() {
     input.style.backgroundColor = 'crimson';
     input.style.color = '#fff';
     input.value = '';
+    input.disabled = true;
     input.placeholder = 'Reload page...'
     resetBtn.style.display = 'block';
     resetBtn.addEventListener('click', resetGame)
