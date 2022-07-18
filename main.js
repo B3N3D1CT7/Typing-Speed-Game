@@ -99,7 +99,7 @@ function wordMatch() {
 
 function wordMatches() {
   if (input.value === currentWord.textContent) {
-    result.textContent = 'Great!!';
+    result.textContent = comment();
     result.style.color = 'green';
     scoreCount++
     return true;
@@ -131,4 +131,11 @@ function checkGameStatus() {
 
 function resetGame() {
   document.location.reload();
+}
+
+comments = ['Great!', 'Superb!', 'Amazing!', 'Correct!', 'Good!']
+
+function comment() {
+  let rand = Math.floor(Math.random() * comments.length)
+  return comments[rand];
 }
