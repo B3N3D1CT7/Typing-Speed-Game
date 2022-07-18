@@ -111,18 +111,18 @@ function wordMatches() {
 
 function checkGameStatus() {
   if (!isPlaying && time === 0) {
-    input.style.backgroundColor = `rgba(255,0,0,0.7)`;
+    input.style.backgroundColor = `crimson`;
     input.style.border = `.1rem sold white`;
     input.style.color = '#fff';
-    input.value = '';
     input.disabled = true;
-    input.placeholder = 'Start new game...'
+    input.value = 'Start new game...'
     resetBtn.style.display = 'block';
     resetBtn.addEventListener('click', resetGame)
   } else {
     input.disabled = false;
     input.style.backgroundColor = '#fff';
     input.style.color = '#111';
+    input.value = '';
   }
   if (scoreCount === -1) {
     score.textContent = 0;
@@ -133,10 +133,12 @@ function checkGameStatus() {
 
 function resetGame() {
   time = getTimeCount();
+  input.style.color = '#111';
   scoreCount = 0;
   scoreCount.textContent = scoreCount;
   isPlaying = true;
   input.disabled = false;
+  input.value = '';
   input.focus();
   randomWord();
 }
