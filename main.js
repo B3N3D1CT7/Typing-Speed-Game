@@ -25,20 +25,22 @@ let isPlaying = true;
 let timer;
 
 function getTimeCount() {
-  timeCounter = 30;
+  if (easy.checked) {
+    timeCounter = 5;
+  } else if (medium.checked) {
+    timeCounter = 3;
+  } else if (hard.checked ){
+    timeCounter = 2;
+  } else {
+    timeCounter = 5;
+  }
   return timeCounter;
 }
 
 function timeOut() {
-  if (easy.checked) {
-    setInterval(timeCount, 2000);
-  } else if (medium.checked) {
-    setInterval(timeCount, 1500);
-  } else if (hard.checked ){
-    setInterval(timeCount, 1000);
-  } else {
-    setInterval(timeCount, 1000);
-  }
+  
+  setInterval(timeCount, 1000);
+  
 }
 
 for (const label of labels) {
@@ -90,6 +92,7 @@ function wordMatch() {
     input.value = '';
     input.focus();
     randomWord();
+    time = getTimeCount();
   }
   currentTime.textContent = time;
 }
