@@ -111,7 +111,8 @@ function wordMatches() {
 
 function checkGameStatus() {
   if (!isPlaying && time === 0) {
-    input.style.backgroundColor = 'crimson';
+    input.style.backgroundColor = `rgba(255,0,0,0.7)`;
+    input.style.border = `.1rem sold white`;
     input.style.color = '#fff';
     input.value = '';
     input.disabled = true;
