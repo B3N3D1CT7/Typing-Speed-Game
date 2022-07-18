@@ -134,6 +134,7 @@ function resetGame() {
   scoreCount = 0;
   scoreCount.textContent = scoreCount;
   isPlaying = true;
+  input.disabled = false;
   input.focus();
   randomWord();
 }
