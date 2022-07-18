@@ -119,6 +119,7 @@ function checkGameStatus() {
     resetBtn.style.display = 'block';
     resetBtn.addEventListener('click', resetGame)
   } else {
+    input.disabled = false;
     input.style.backgroundColor = '#fff';
     input.style.color = '#111';
   }
