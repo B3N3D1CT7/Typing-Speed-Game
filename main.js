@@ -122,7 +122,6 @@ function checkGameStatus() {
     input.disabled = false;
     input.style.backgroundColor = '#fff';
     input.style.color = '#111';
-    input.value = '';
   }
   if (scoreCount === -1) {
     score.textContent = 0;
