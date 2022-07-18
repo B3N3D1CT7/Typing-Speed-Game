@@ -115,7 +115,7 @@ function checkGameStatus() {
     input.style.color = '#fff';
     input.value = '';
     input.disabled = true;
-    input.placeholder = 'Reload page...'
+    input.placeholder = 'Start new game...'
     resetBtn.style.display = 'block';
     resetBtn.addEventListener('click', resetGame)
   } else {
