@@ -68,6 +68,7 @@ function playGame() {
   randomWord();
   time = getTimeCount();
   timeOut();
+  input.focus();
   input.addEventListener('input', wordMatch);
   setInterval(checkGameStatus, 50);
 }
