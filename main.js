@@ -130,7 +130,12 @@ function checkGameStatus() {
 }
 
 function resetGame() {
-  document.location.reload();
+  time = getTimeCount();
+  scoreCount = 0;
+  scoreCount.textContent = scoreCount;
+  isPlaying = true;
+  input.focus();
+  randomWord();
 }
 
 comments = ['Great!', 'Superb!', 'Amazing!', 'Correct!', 'Good!']
